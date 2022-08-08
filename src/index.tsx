@@ -1,13 +1,21 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { HashRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
 
 import App from 'view/app'
-import reportWebVitals from './reportWebVitals'
+
+import store from 'store'
+import reportWebVitals from 'reportWebVitals'
 
 const root = createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <StrictMode>
-    <App />
+    <Provider store={store}>
+      <HashRouter>
+        <App />
+      </HashRouter>
+    </Provider>
   </StrictMode>,
 )
 
