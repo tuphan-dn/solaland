@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/solaland/static/css/main.b43c29ab.css",
-    "main.js": "/solaland/static/js/main.8b8cde2b.js",
+    "main.js": "/solaland/static/js/main.3065ac58.js",
     "static/js/255.e4263cf2.chunk.js": "/solaland/static/js/255.e4263cf2.chunk.js",
     "static/media/Serene_Village_32x32.png": "/solaland/static/media/Serene_Village_32x32.01cef54901d71b9b0bb7.png",
     "index.html": "/solaland/index.html",
     "main.b43c29ab.css.map": "/solaland/static/css/main.b43c29ab.css.map",
-    "main.8b8cde2b.js.map": "/solaland/static/js/main.8b8cde2b.js.map",
+    "main.3065ac58.js.map": "/solaland/static/js/main.3065ac58.js.map",
     "255.e4263cf2.chunk.js.map": "/solaland/static/js/255.e4263cf2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b43c29ab.css",
-    "static/js/main.8b8cde2b.js"
+    "static/js/main.3065ac58.js"
   ]
 }
