@@ -12,6 +12,9 @@ const ApplicationContextProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     if (ref.current) ref.current.replaceWith(app.view)
+    // return () => {
+    //   app.view.parentNode?.removeChild(app.view)
+    // }
   }, [ref])
 
   return (
