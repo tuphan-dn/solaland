@@ -1,27 +1,21 @@
 import { useEffect } from 'react'
 import { BaseTexture, Container, Rectangle, Sprite, Texture } from 'pixi.js'
 
-import { useApplication } from 'providers/application.provider'
 import { uh, uw } from 'configs/resolution.config'
 import SPRITE_SHEET from 'static/assets/Serene_Village_32x32.png'
 
 export type GrassProps = {
   container: Container
+  x?: number
+  y?: number
 }
 
-export const offset = {
-  w: 3,
-  h: 0,
-}
-
-const Grass = ({ container }: GrassProps) => {
-  const app = useApplication()
-
+const Grass = ({ container, x = 0, y = 0 }: GrassProps) => {
   useEffect(() => {
     const spriteSheet = BaseTexture.from(SPRITE_SHEET)
     const texture = new Texture(
       spriteSheet,
-      new Rectangle(offset.w * uw, offset.h * uh, uw, uh),
+      new Rectangle(3 * uw, 0 * uh, uw, uh),
     )
     const grass = new Sprite(texture)
     container.addChild(grass)
@@ -30,7 +24,7 @@ const Grass = ({ container }: GrassProps) => {
       texture.destroy()
       spriteSheet.destroy()
     }
-  }, [app, container])
+  }, [container])
 
   return null
 }

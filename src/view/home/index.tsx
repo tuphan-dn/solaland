@@ -1,9 +1,10 @@
-import { useEffect, useMemo } from 'react'
+import { Fragment, useEffect, useMemo } from 'react'
 import { Container } from 'pixi.js'
 
 import Grass from 'view/components/terrain/grass'
 
 import { useApplication } from 'providers/application.provider'
+import Fire from 'view/components/fire'
 
 const Home = () => {
   const app = useApplication()
@@ -16,7 +17,12 @@ const Home = () => {
     }
   }, [app, container])
 
-  return <Grass container={container} />
+  return (
+    <Fragment>
+      <Grass container={container} />
+      <Fire container={container} />
+    </Fragment>
+  )
 }
 
 export default Home
