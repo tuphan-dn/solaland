@@ -1,38 +1,22 @@
-import { Container, Sprite, Texture } from 'pixi.js'
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
+import { Container } from 'pixi.js'
 
-import VILLAGE from 'static/assets/Serene_Village_32x32.png'
+import Grass from 'view/components/terrain/grass'
+
 import { useApplication } from 'providers/application.provider'
-import { useSelector } from 'react-redux'
-import { AppState } from 'store'
 
 const Home = () => {
   const app = useApplication()
-  const height = useSelector((state: AppState) => state.ui.height)
+  const container = useMemo(() => new Container(), [])
 
   useEffect(() => {
-    const container = new Container()
-    const texture = Texture.from(VILLAGE)
-    const village = new Sprite(texture)
-
-    let elapse = 0
-    const move = (delta: number) => {
-      elapse += delta / 200
-      const amplitude = (height - village.height) / 2
-      const covariance = Math.sin(elapse)
-      village.y = amplitude * (1 + covariance)
-    }
-
     app.stage.addChild(container)
-    container.addChild(village)
-    app.ticker.add(move)
     return () => {
-      app.ticker.remove(move)
-      container.destroy()
+      if (!container.destroyed) container.destroy()
     }
-  }, [app, height])
+  }, [app, container])
 
-  return null
+  return <Grass container={container} />
 }
 
 export default Home

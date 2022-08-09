@@ -1,4 +1,3 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { HashRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
@@ -11,15 +10,13 @@ import reportWebVitals from 'reportWebVitals'
 
 const root = createRoot(document.getElementById('root') as HTMLElement)
 root.render(
-  <StrictMode>
-    <Provider store={store}>
-      <HashRouter>
-        <ApplicationProvider>
-          <App />
-        </ApplicationProvider>
-      </HashRouter>
-    </Provider>
-  </StrictMode>,
+  <Provider store={store}>
+    <HashRouter>
+      <ApplicationProvider>
+        <App />
+      </ApplicationProvider>
+    </HashRouter>
+  </Provider>,
 )
 
 // If you want to start measuring performance in your app, pass a function
