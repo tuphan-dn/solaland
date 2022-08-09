@@ -13,6 +13,11 @@ const Home = () => {
     const texture = Texture.from(VILLAGE)
     const village = new Sprite(texture)
     container.addChild(village)
+    app.ticker.add((delta) => {
+      let elapsed = 0.0
+      elapsed += delta
+      container.x = 100.0 + Math.cos(elapsed / 50.0) * 100.0
+    })
   }, [app])
 
   return null
