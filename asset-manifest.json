@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.b43c29ab.css",
-    "main.js": "/static/js/main.c300b254.js",
+    "main.js": "/static/js/main.c2d0d324.js",
     "static/js/255.e4263cf2.chunk.js": "/static/js/255.e4263cf2.chunk.js",
     "static/media/Serene_Village_32x32.png": "/static/media/Serene_Village_32x32.01cef54901d71b9b0bb7.png",
     "index.html": "/index.html",
     "main.b43c29ab.css.map": "/static/css/main.b43c29ab.css.map",
-    "main.c300b254.js.map": "/static/js/main.c300b254.js.map",
+    "main.c2d0d324.js.map": "/static/js/main.c2d0d324.js.map",
     "255.e4263cf2.chunk.js.map": "/static/js/255.e4263cf2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b43c29ab.css",
-    "static/js/main.c300b254.js"
+    "static/js/main.c2d0d324.js"
   ]
 }
