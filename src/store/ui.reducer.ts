@@ -10,6 +10,7 @@ export type Theme = 'light' | 'dark'
 export type UIState = {
   theme: Theme
   width: number
+  height: number
   infix: Infix
   touchable: boolean
 }
@@ -38,6 +39,7 @@ const NAME = 'ui'
 const initialState: UIState = {
   theme: getTheme(),
   width: window.innerWidth,
+  height: window.innerHeight,
   infix: getInfix(),
   touchable: isTouchable(),
 }
@@ -55,8 +57,9 @@ export const setTheme = createAsyncThunk(
 
 export const resize = createAsyncThunk(`${NAME}/resize`, async () => {
   const width = window.innerWidth
+  const height = window.innerHeight
   const infix = getInfix()
-  return { width, infix }
+  return { width, height, infix }
 })
 
 /**

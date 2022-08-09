@@ -4,6 +4,7 @@ import { HashRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 
 import App from 'view/app'
+import ApplicationProvider from 'providers/application.provider'
 
 import store from 'store'
 import reportWebVitals from 'reportWebVitals'
@@ -13,7 +14,9 @@ root.render(
   <StrictMode>
     <Provider store={store}>
       <HashRouter>
-        <App />
+        <ApplicationProvider>
+          <App />
+        </ApplicationProvider>
       </HashRouter>
     </Provider>
   </StrictMode>,
